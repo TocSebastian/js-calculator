@@ -1,0 +1,57 @@
+.calculator{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    /* width: 300px;
+    height: 400px; */
+    width: 80vw; /* 80% of viewport width */
+    height: 80vh; /* 80% of viewport height */
+    max-width: 500px; /* Optional: Prevents it from getting too big */
+    max-height: 700px;
+    border: 2px solid black;
+
+}
+
+.number_operator {
+    display: flex;
+    flex-direction: row;
+    flex: 9;
+    gap: 5px; /* Adds spacing between elements */
+    align-items: stretch; /* Ensures everything fills vertically */
+    justify-content: center; /* Keeps content centered */
+}
+
+
+.number {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(4, 1fr); /* 4 equal rows */
+    flex: 3;
+    gap: 5px;
+    height: 100%; /* Ensures it fills parent */
+}
+
+
+.operators {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr); /* Creates 5 equal rows */
+    flex: 1;
+    gap: 5px;
+    align-items: stretch; /* Ensures full height */
+}
+
+.display_element{
+    background-color: azure;
+    flex: 1;
+    border-bottom: 2px solid black;
+}
+
+button {
+    width: 100%; /* Make sure buttons fill their container */
+    height: 100%; /* Ensures they fill their row */
+    font-size: 1.5em; /* Adjusts font size for readability */
+}
+
+.zero {
+    grid-column: span 3; /* Makes 0 button take the full row */
+}
